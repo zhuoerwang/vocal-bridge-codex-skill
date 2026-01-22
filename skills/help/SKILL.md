@@ -66,6 +66,6 @@ curl -fsSL https://vocalbridgeai.com/cli/vb.py -o vb && chmod +x vb
 
 ## More Information
 
-- Documentation: https://vocalbridgeai.com/docs
+- Documentation: https://vocalbridgeai.com/docs/developer-guide
 - Dashboard: https://vocalbridgeai.com
 - GitHub: https://github.com/vocalbridgeai/vocal-bridge-claude-plugin

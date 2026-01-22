@@ -98,7 +98,7 @@ pip install vocal-bridge
 ## Links
 
 - [Vocal Bridge Dashboard](https://vocalbridgeai.com)
-- [Documentation](https://vocalbridgeai.com/docs)
+- [Documentation](https://vocalbridgeai.com/docs/developer-guide)
 - [CLI on PyPI](https://pypi.org/project/vocal-bridge/)
 
 ## License
