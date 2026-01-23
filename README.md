@@ -46,7 +46,7 @@ claude --plugin-dir ./vocal-bridge-claude-plugin
 | `/vocal-bridge:download <session_id>` | Download call recording audio |
 | `/vocal-bridge:stats` | Show call statistics |
 | `/vocal-bridge:prompt [show\|set]` | Manage system prompt |
-| `/vocal-bridge:config [show\|set\|edit]` | Manage all agent settings |
+| `/vocal-bridge:config [show\|set\|edit\|options]` | Manage all agent settings |
 | `/vocal-bridge:debug` | Stream real-time debug events |
 | `/vocal-bridge:setup` | Install CLI if needed |
 | `/vocal-bridge:help` | Show all commands |
@@ -94,6 +94,11 @@ claude --plugin-dir ./vocal-bridge-claude-plugin
 
 # View settings as JSON
 /vocal-bridge:config show --json
+
+# Discover valid options for a setting (IMPORTANT: do this before changing settings)
+/vocal-bridge:config options voice          # by setting name
+/vocal-bridge:config options "TTS Model"    # by label (same as UI)
+/vocal-bridge:config options audio          # all settings in a category
 
 # Update specific settings
 /vocal-bridge:config set --style Focused

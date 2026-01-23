@@ -14,6 +14,26 @@ pip install --upgrade vocal-bridge
 
 ## Commands
 
+### Discover valid options
+
+**IMPORTANT**: Before updating settings, use `vb config options` to discover valid values. This prevents errors from invalid values.
+
+```bash
+# Show all available options for current agent style
+vb config options
+
+# Show options for a specific setting (by name or label)
+vb config options voice
+vb config options "TTS Model"
+
+# Show all settings in a category
+vb config options audio
+vb config options realtime
+
+# Output as JSON
+vb config options --json
+```
+
 ### Show all settings
 
 ```bash
@@ -86,11 +106,15 @@ This allows editing all settings at once. Save and close the editor to apply cha
 ## Based on $ARGUMENTS
 
 Determine user intent from $ARGUMENTS:
+- "options" or "valid" -> show valid options with `vb config options`
+- "options <name>" -> show options for specific setting
 - "show" or empty -> show all settings with `vb config show`
 - "show --json" or "json" -> show as JSON
 - "set" with options -> update specific settings
 - "edit" -> open full config in editor
-- Contains setting names -> use `vb config set` with appropriate flags
+- Contains setting names -> first run `vb config options <setting>` to show valid values, then use `vb config set`
+
+**Best Practice**: When user wants to change a setting, ALWAYS run `vb config options <setting>` first to show them valid values before making changes.
 
 ## Agent Styles
 

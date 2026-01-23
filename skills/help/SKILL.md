@@ -14,7 +14,7 @@ description: Show help for Vocal Bridge Claude Code plugin commands
 | `/vocal-bridge:download <session_id>` | Download call recording |
 | `/vocal-bridge:stats` | Show call statistics |
 | `/vocal-bridge:prompt [show\|set]` | Manage system prompt |
-| `/vocal-bridge:config [show\|set\|edit]` | Manage all agent settings |
+| `/vocal-bridge:config [show\|set\|edit\|options]` | Manage all agent settings |
 | `/vocal-bridge:debug` | Stream debug events |
 | `/vocal-bridge:setup` | Install CLI if needed |
 
@@ -53,6 +53,10 @@ description: Show help for Vocal Bridge Claude Code plugin commands
 
 # View all agent settings
 /vocal-bridge:config show
+
+# Show valid options for a setting (ALWAYS do this before changing settings)
+/vocal-bridge:config options voice
+/vocal-bridge:config options "TTS Model"
 
 # Update agent settings
 /vocal-bridge:config set --debug-mode true
