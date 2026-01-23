@@ -46,6 +46,7 @@ claude --plugin-dir ./vocal-bridge-claude-plugin
 | `/vocal-bridge:download <session_id>` | Download call recording audio |
 | `/vocal-bridge:stats` | Show call statistics |
 | `/vocal-bridge:prompt [show\|set]` | Manage system prompt |
+| `/vocal-bridge:config [show\|set\|edit]` | Manage all agent settings |
 | `/vocal-bridge:debug` | Stream real-time debug events |
 | `/vocal-bridge:setup` | Install CLI if needed |
 | `/vocal-bridge:help` | Show all commands |
@@ -83,6 +84,24 @@ claude --plugin-dir ./vocal-bridge-claude-plugin
 
 # Update prompt (will guide you through the process)
 /vocal-bridge:prompt set
+```
+
+### Manage Agent Configuration
+
+```
+# View all agent settings
+/vocal-bridge:config show
+
+# View settings as JSON
+/vocal-bridge:config show --json
+
+# Update specific settings
+/vocal-bridge:config set --style Focused
+/vocal-bridge:config set --debug-mode true
+/vocal-bridge:config set --hold-enabled true --hangup-enabled true
+
+# Edit full configuration in $EDITOR
+/vocal-bridge:config edit
 ```
 
 ### Debug Live Calls
