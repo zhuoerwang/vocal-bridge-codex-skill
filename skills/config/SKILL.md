@@ -28,7 +28,11 @@ vb config options "TTS Model"
 
 # Show all settings in a category
 vb config options audio
+vb config options stt
 vb config options realtime
+
+# Show language options (for Chatty/Focused styles)
+vb config options language
 
 # Output as JSON
 vb config options --json
@@ -147,11 +151,40 @@ Determine user intent from $ARGUMENTS:
 
 ### Model Settings (model_settings.json)
 
+For Focused style:
+
 ```json
 {
-  "stt_model": "nova-3",
-  "tts_voice": "alloy",
-  "temperature": 0.7
+  "stt": {
+    "model": "assemblyai:universal-streaming",
+    "language": "en",
+    "eot_threshold": 0.5
+  },
+  "tts": {
+    "model": "eleven_multilingual_v2",
+    "voice_id": "cgSgspJ2msm6clMCkdW9"
+  },
+  "session": {
+    "max_call_duration_minutes": 30,
+    "max_history_messages": 100
+  }
+}
+```
+
+**Language options:**
+- Preset: `en`, `multi` (auto-detect), `es`, `fr`, `de`, `pt`, `it`, `nl`, `ja`, `ko`, `zh`, `hi`, `ru`, `ar`, `pl`, `tr`, `vi`, `th`, `id`, `sv`, `da`, `fi`, `no`, `uk`, `cs`, `el`, `he`, `ro`, `hu`, `ms`, `bg`, `sk`, `hr`, `ca`, `ta`
+- Custom: Use `language_source: "custom"` with `custom_language: "<BCP-47 code>"` (e.g., `en-US`, `pt-BR`, `zh-TW`)
+
+For custom language code:
+
+```json
+{
+  "stt": {
+    "model": "deepgram:nova-3",
+    "language_source": "custom",
+    "custom_language": "pt-BR",
+    "eot_threshold": 0.5
+  }
 }
 ```
 
