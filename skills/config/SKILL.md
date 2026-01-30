@@ -196,6 +196,18 @@ For custom language code:
     "enabled": true,
     "api_key": "...",
     "posting_id": "..."
+  },
+  "client_actions": {
+    "enabled": true,
+    "actions": [
+      {"name": "show_product", "description": "Display a product card", "direction": "agent_to_app"},
+      {"name": "practice_result", "description": "User completed practice", "direction": "app_to_agent", "behavior": "notify"},
+      {"name": "word_data", "description": "New word data from app", "direction": "app_to_agent", "behavior": "respond"}
+    ]
   }
 }
 ```
+
+**Behavior field** (for `app_to_agent` actions only):
+- `respond` (default): Agent generates a reply when this event arrives
+- `notify`: Event is silently added to conversation context — agent sees it on next turn but does not reply immediately
