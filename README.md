@@ -20,6 +20,9 @@ Restart Codex to pick up the new skills.
 ### Option B: Use Codex Skill Installer
 
 If you use the `skill-installer` skill, install from this repo and the `skills/` subfolder.
+```bash
+`skill-installer` https://github.com/zhuoerwang/vocal-bridge-codex-skill
+```
 
 ## Getting Started
 
