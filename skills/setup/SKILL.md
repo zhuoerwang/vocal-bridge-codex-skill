@@ -1,7 +1,6 @@
 ---
 name: setup
 description: Check and install the Vocal Bridge CLI. Run this automatically before using other Vocal Bridge commands if the CLI is not installed.
-allowed-tools: Bash
 ---
 
 Check if the Vocal Bridge CLI is installed and install it if needed.
@@ -31,7 +30,7 @@ uv pip install --upgrade vocal-bridge
 
 Run: `vb --version` or `python -m vocal_bridge.cli --version`
 
-If installation succeeds, inform the user they can now use Vocal Bridge commands like `/vocal-bridge:login`.
+If installation succeeds, inform the user they can now use Vocal Bridge skills like `login`.
 
 If pip install fails, suggest using the standalone script:
 

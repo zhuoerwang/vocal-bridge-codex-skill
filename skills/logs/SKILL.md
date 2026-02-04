@@ -1,7 +1,6 @@
 ---
 name: logs
 description: View call logs for the Vocal Bridge voice agent. Can list recent calls or show details of a specific session including transcript.
-allowed-tools: Bash
 ---
 
 View call logs for the voice agent.
@@ -14,10 +13,10 @@ pip install --upgrade vocal-bridge
 
 ## List Recent Logs
 
-If $ARGUMENTS is empty or contains options, list recent logs:
+If the user provides no arguments or only flags, list recent logs and pass those flags through:
 
 ```bash
-vb logs $ARGUMENTS
+vb logs [flags]
 ```
 
 Common options:
@@ -27,7 +26,7 @@ Common options:
 
 ## View Session Details
 
-If $ARGUMENTS contains a UUID (session ID), show details:
+If the user provides a UUID (session ID), show details:
 
 ```bash
 vb logs <session_id>
@@ -40,6 +39,6 @@ This shows:
 - Caller phone and direction
 - Full transcript
 - Error message (if failed)
-- Recording availability (if available, use `/vocal-bridge:download <session_id>` to download)
+- Recording availability (if available, use the `download` skill with the session ID)
 
 Use `--json` flag for machine-readable output.

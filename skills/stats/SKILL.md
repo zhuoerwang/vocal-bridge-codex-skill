@@ -1,7 +1,6 @@
 ---
 name: stats
 description: Show call statistics for the Vocal Bridge voice agent including total calls, success rate, and average duration.
-allowed-tools: Bash
 ---
 
 Show call statistics for the voice agent.
@@ -15,7 +14,7 @@ pip install --upgrade vocal-bridge
 Then run:
 
 ```bash
-vb stats $ARGUMENTS
+vb stats [flags]
 ```
 
 This displays:

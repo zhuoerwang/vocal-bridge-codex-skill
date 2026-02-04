@@ -1,7 +1,6 @@
 ---
 name: config
 description: View and update all agent configuration settings including style, capabilities, MCP servers, and more.
-allowed-tools: Bash, Read, Write
 ---
 
 Manage the voice agent's full configuration settings.
@@ -113,12 +112,12 @@ vb config edit
 
 This allows editing all settings at once. Save and close the editor to apply changes.
 
-## Based on $ARGUMENTS
+## Based on User Request
 
-Determine user intent from $ARGUMENTS:
+Determine user intent from what they ask for:
 - "options" or "valid" -> show valid options with `vb config options`
 - "options <name>" -> show options for specific setting
-- "show" or empty -> show all settings with `vb config show`
+- "show" or no qualifier -> show all settings with `vb config show`
 - "show --json" or "json" -> show as JSON
 - "set" with options -> update specific settings
 - "edit" -> open full config in editor

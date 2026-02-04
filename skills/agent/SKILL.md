@@ -1,7 +1,6 @@
 ---
 name: agent
 description: Show information about the connected Vocal Bridge voice agent including name, mode, phone number, and deployment status.
-allowed-tools: Bash
 ---
 
 Get information about the connected voice agent.

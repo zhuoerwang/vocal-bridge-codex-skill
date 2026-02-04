@@ -1,7 +1,6 @@
 ---
 name: debug
 description: Stream real-time debug events from the Vocal Bridge voice agent. Shows transcriptions, agent responses, tool calls, and errors.
-allowed-tools: Bash
 ---
 
 Stream real-time debug events from the voice agent.
@@ -15,7 +14,7 @@ pip install --upgrade vocal-bridge
 Then run:
 
 ```bash
-vb debug $ARGUMENTS
+vb debug [flags]
 ```
 
 This command runs continuously until interrupted (Ctrl+C).

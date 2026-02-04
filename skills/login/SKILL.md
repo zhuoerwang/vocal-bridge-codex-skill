@@ -1,7 +1,6 @@
 ---
 name: login
-description: Authenticate with Vocal Bridge using your API key. Use when the user wants to connect Claude Code to their Vocal Bridge agent.
-allowed-tools: Bash
+description: Authenticate with Vocal Bridge using your API key. Use when the user wants to connect Codex to their Vocal Bridge agent.
 ---
 
 Authenticate with Vocal Bridge to manage your voice agent.
@@ -22,12 +21,12 @@ pip install --upgrade vocal-bridge
 
 ## Login
 
-Run: `vb auth login $ARGUMENTS`
+Run: `vb auth login <api_key>`
 
-If no API key is provided in $ARGUMENTS, tell the user they need to provide their API key. Example:
+If no API key is provided, tell the user they need to provide their API key. Example:
 
 ```
-/vocal-bridge:login vb_your_api_key_here
+login vb_your_api_key_here
 ```
 
 The API key can be found on the agent detail page at https://vocalbridgeai.com

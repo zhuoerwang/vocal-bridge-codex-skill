@@ -1,80 +1,80 @@
 ---
 name: help
-description: Show help for Vocal Bridge Claude Code plugin commands
+description: Show help for Vocal Bridge Codex skills
 ---
 
-# Vocal Bridge Plugin Commands
+# Vocal Bridge Codex Skills
 
-| Command | Description |
+| Skill | Description |
 |---------|-------------|
-| `/vocal-bridge:login [api_key]` | Authenticate with API key |
-| `/vocal-bridge:status` | Check authentication status |
-| `/vocal-bridge:agent` | Show agent information |
-| `/vocal-bridge:logs [session_id]` | View call logs |
-| `/vocal-bridge:download <session_id>` | Download call recording |
-| `/vocal-bridge:stats` | Show call statistics |
-| `/vocal-bridge:prompt [show\|set]` | Manage system prompt |
-| `/vocal-bridge:config [show\|set\|edit\|options]` | Manage all agent settings |
-| `/vocal-bridge:debug` | Stream debug events |
-| `/vocal-bridge:setup` | Install CLI if needed |
+| `login [api_key]` | Authenticate with API key |
+| `status` | Check authentication status |
+| `agent` | Show agent information |
+| `logs [session_id]` | View call logs |
+| `download <session_id>` | Download call recording |
+| `stats` | Show call statistics |
+| `prompt [show\|set]` | Manage system prompt |
+| `config [show\|set\|edit\|options]` | Manage all agent settings |
+| `debug` | Stream debug events |
+| `setup` | Install CLI if needed |
 
 ## Getting Started
 
 1. Get your API key from your agent detail page at https://vocalbridgeai.com
-2. Run `/vocal-bridge:login vb_your_api_key` to authenticate
-3. Use `/vocal-bridge:agent` to verify connection
+2. Run `login vb_your_api_key` to authenticate
+3. Use `agent` to verify connection
 
 ## Examples
 
 ```
 # Login with your API key
-/vocal-bridge:login vb_abc123xyz
+login vb_abc123xyz
 
 # Check connection status
-/vocal-bridge:status
+status
 
 # View recent call logs
-/vocal-bridge:logs
+logs
 
 # View last 50 failed calls
-/vocal-bridge:logs -n 50 --status failed
+logs -n 50 --status failed
 
 # View specific call transcript
-/vocal-bridge:logs 550e8400-e29b-41d4-a716-446655440000
+logs 550e8400-e29b-41d4-a716-446655440000
 
 # Download call recording
-/vocal-bridge:download 550e8400-e29b-41d4-a716-446655440000
+download 550e8400-e29b-41d4-a716-446655440000
 
 # Show call statistics
-/vocal-bridge:stats
+stats
 
 # View current prompt
-/vocal-bridge:prompt show
+prompt show
 
 # View all agent settings
-/vocal-bridge:config show
+config show
 
 # Show valid options for a setting (ALWAYS do this before changing settings)
-/vocal-bridge:config options voice
-/vocal-bridge:config options "TTS Model"
+config options voice
+config options "TTS Model"
 
 # Update agent settings
-/vocal-bridge:config set --debug-mode true
+config set --debug-mode true
 
 # Set session limits
-/vocal-bridge:config set --max-call-duration 15
-/vocal-bridge:config set --max-history-messages 50
+config set --max-call-duration 15
+config set --max-history-messages 50
 
 # Edit full config in editor
-/vocal-bridge:config edit
+config edit
 
 # Stream debug events
-/vocal-bridge:debug
+debug
 ```
 
 ## CLI Installation
 
-The plugin automatically installs the CLI when needed. You can also install manually:
+The skills can install the CLI when needed. You can also install manually:
 
 ```bash
 pip install vocal-bridge
